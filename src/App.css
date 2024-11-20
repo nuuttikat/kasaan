@@ -1,0 +1,44 @@
+/* Videon ja sen päälle tulevan tekstin tyylit */
+.video-container {
+  position: relative;
+  width: 100%;
+  min-height: 60vh; /* Matalampi korkeus */
+  margin: 0;
+  padding: 0;
+}
+
+.video-container video {
+  width: 100%;
+  height: auto; /* Automaattinen korkeus säilyttää mittasuhteet */
+  object-fit: cover;
+}
+
+.video-text {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  transform: translate(-10%, -10%);
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 23px;
+  font-weight: 800;
+  font-family: Arial, sans-serif;
+  max-width: 90%; /* Varmistaa, että teksti ei leviä yli videon reunan */
+  word-wrap: break-word;
+}
+
+/* Responsiivisuus */
+@media (max-width: 768px) {
+  .video-container {
+    min-height: 40vh; /* Pienempi korkeus pienille näytöille */
+  }
+
+  .video-text {
+    font-size: 16px;
+    left: 5%; /* Parempi sijoittelu pienille näytöille */
+    top: 5%;
+    transform: translate(0, 0);
+  }
+}

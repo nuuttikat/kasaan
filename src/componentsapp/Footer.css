@@ -1,0 +1,57 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #282c34;
+    color: white;
+    padding: 20px 0;
+}
+
+.footer-icons {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Asettaa ikonit ja tekstit vasemmalle laidalle */
+    margin-bottom: 10px;
+    width: 90%;
+    padding-left: 20px; /* Vähän marginaalia vasemmalta */
+}
+
+.footer-text-label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.footer-icon-text {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; /* Pieni väli jokaisen ikoni-tekstiparin väliin */
+}
+
+.footer-icon-text a {
+    color: white;
+    margin-right: 10px;
+}
+
+.footer-caption-link {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-caption-link:hover {
+    text-decoration: underline; /* Lisätään alleviivaus hover-tilassa */
+}
+
+.footer-caption {
+    margin-top: 5px; /* Vähän väliä ikoniin */
+}
+
+.footer-text {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.footer-email {
+    text-align: center;
+    font-size: 18px;
+    color: white;
+}

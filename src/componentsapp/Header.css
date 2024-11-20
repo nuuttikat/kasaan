@@ -1,0 +1,100 @@
+.header {
+    background-color: #fcda1e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 40px;
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%; /* header koko näytö levyseks */
+    top: 0;
+    z-index: 1000;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.header-logo {
+    height: 10rem; /* logon koko */
+    margin-right: 20px;
+    position: absolute;
+    left: 20px;
+}
+
+.header-text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header-title, .header-subtitle {
+    margin: 0;
+    text-align: center;
+}
+
+.header-title {
+    font-size: 1.8rem;
+}
+
+.header-subtitle {
+    font-size: 1rem;
+    color: #000000;
+}
+
+.header-icons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    right: 20px;
+}
+
+.header-icons a {
+    color: black; /* Muuta väri sopivaksi headeriin */
+}
+
+/* Responsiivisuus */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 20px;
+    }
+
+    .header-logo {
+        height: 7rem; /* pienempi koko pienemmis näyt */
+        position: static; /* Resets to normal flow for small screens */
+        margin-bottom: 10px; /* Adds space below the logo */
+    }
+
+    .header-text-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header-title {
+        font-size: 1.4rem;
+    }
+
+    .header-subtitle {
+        font-size: 1rem;
+    }
+
+    .header-icons {
+        position: static;
+        margin-top: 10px;
+    }
+
+    .social-icon {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-title {
+        font-size: 1.2rem;
+    }
+
+    .header-subtitle {
+        font-size: 0.9rem;
+    }
+}
