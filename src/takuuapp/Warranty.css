@@ -1,0 +1,34 @@
+/* Taulukon säiliö, joka keskittää taulukon näytön keskelle */
+.table-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Koko näkymän korkeus */
+  overflow-x: auto;
+}
+
+/* Taulukon tyyli */
+.table {
+  width: 80%;
+  border-collapse: collapse;
+  border: 1px solid #4a5568; /* Paksumpi reuna */
+}
+
+/* Taulukon otsikot ja solut */
+.table th, .table td {
+  border: 1px solid #4a5568; /* Paksumpi reuna */
+  padding: 8px;
+}
+
+/* Taulukon otsikon tyyli */
+.table th {
+  background-color: #000;
+  color: #fff;
+}
+
+/* Poista luettelomerkit taulukon sisällä olevista luetteloista */
+.table ul {
+  list-style-type: none; /* Poista luettelomerkit */
+  padding-left: 0; /* Poista oletustäyte */
+  margin: 0; /* Poista oletusmarginaali */
+}

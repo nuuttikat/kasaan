@@ -1,70 +1,78 @@
-.menu {
-    background-color: white;
-    padding: 7px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    z-index: 1000;
-    position: static;
+/* Navigointivalikon tyyli */
+.menu2 {
+    background-color: white; /* Taustaväri */
+    padding: 7px; /* Täyte */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Varjo */
+    width: 100%; /* Leveys */
+    z-index: 1000; /* Z-indeksi */
+    position: static; /* Alkuperäinen sijainti */
     top: auto;
-    transition: position 0.3s ease-in-out;
+    transition: position 0.3s ease-in-out; /* Sijainnin siirtymä */
     display: block;
-    margin: 0; /* Ensures no extra margin around the menu */
+    margin: 0;
     box-sizing: border-box;
 }
 
-.menu.fixed {
-    position: fixed;
+/* Kiinteä navigointivalikko */
+.menu2.fixed {
+    position: fixed; /* Kiinnitetty sijainti */
     top: 0;
     left: 0;
     right: 0;
     box-sizing: border-box;
 }
 
-.menu.placeholder {
-    height: 50px;
+/* Paikkamerkki */
+.menu2.placeholder {
+    height: 50px; /* Korkeus */
     display: none;
     box-sizing: border-box;
 }
 
-.menu.fixed ~ .menu.placeholder {
+/* Näytä paikkamerkki, kun valikko on kiinnitetty */
+.menu2.fixed ~ .menu2.placeholder {
     display: block;
 }
 
-.menu ul {
-    list-style-type: none;
+/* Navigointivalikon lista */
+.menu2 ul {
+    list-style-type: none; /* Poista luettelomerkit */
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-around; /* Tasaa tilan */
     align-items: center;
-    flex-wrap: wrap; /* Ensures items wrap on smaller screens */
+    flex-wrap: wrap;
 }
 
-.menu li {
+/* Navigointivalikon listan kohdat */
+.menu2 li {
     margin: 0;
     padding: 0;
 }
 
-.menu a {
-    text-decoration: none;
-    color: black;
-    font-size: 18px;
-    font-weight: lighter;
-    padding: 10px 15px; /* Adds some padding to make the items more clickable */
+/* Navigointivalikon linkit */
+.menu2 a {
+    text-decoration: none; /* Poista alleviivaus */
+    color: black; /* Tekstin väri */
+    font-size: 18px; /* Fonttikoko */
+    font-weight: lighter; /* Fontin paino */
+    padding: 10px 15px; /* Täyte */
 }
 
+/* Media query pienemmille näytöille */
 @media (max-width: 768px) {
-    .menu ul {
-        flex-direction: column; /* Stacks items vertically */
+    .menu2 ul {
+        flex-direction: column; /* Pystysuuntainen asettelu */
         align-items: center;
         width: 100%;
     }
 
-    .menu li {
-        margin: 10px 0; /* Adds space between items */
+    .menu2 li {
+        margin: 10px 0;
     }
 
-    .menu a {
+    .menu2 a {
         font-size: 16px;
     }
 }

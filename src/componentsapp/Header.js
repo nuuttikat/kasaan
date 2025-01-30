@@ -1,11 +1,19 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { FaInstagram, FaLinkedin, FaFacebook } from 'react-icons/fa';
 import './Header.css';
 
+// Tämä komponentti näyttää sivun yläosan, joka sisältää logon, otsikon ja sosiaalisen median ikonit
 const Header = () => {
     return (
         <div className="header">
-            <img src="./images/kasa/KasaanOylogo.png" alt="Logo" className="header-logo" />
+            <ul className="logo-container">
+                <li>
+                    <Link to="/">
+                        <img src="./images/kasa/KasaanOylogo.png" alt="Logo" className="header-logo" />
+                    </Link>
+                </li>
+            </ul>
             <div className="header-text-container">
                 <h1 className="header-title">Kasaan Oy</h1>
                 <p className="header-subtitle">Yarbo maahantuoja</p>

@@ -2,10 +2,11 @@ import React, { useState } from 'react';
 import { FaInstagram, FaLinkedin, FaFacebook } from 'react-icons/fa';
 import './Footer.css'; // Muista päivittää polku tarvittaessa
 
+// Tämä komponentti näyttää sivun alatunnisteen, joka sisältää sosiaalisen median ikonit ja yhteystiedot
 const Footer = () => {
-    const [instagram, setInstagram] = useState('instagram-kasaanoy');
-    const [linkedin, setLinkedin] = useState('linkedin-Kasaan Oy');
-    const [facebook, setFacebook] = useState('facebook-Kasaan Oy');
+    const [instagram, setInstagram] = useState('instagram-kasaanoy'); // Tilamuuttuja Instagram-tekstille
+    const [linkedin, setLinkedin] = useState('linkedin-Kasaan Oy'); // Tilamuuttuja LinkedIn-tekstille
+    const [facebook, setFacebook] = useState('facebook-Kasaan Oy'); // Tilamuuttuja Facebook-tekstille
 
     return (
         <footer className="footer">
@@ -59,6 +60,7 @@ const Footer = () => {
             </div>
             <div className="footer-text">
                 <p className="footer-email">info@kasaan.fi</p>
+                <p className="footer-copyright">© 2024 NuuttiKatajala</p>
             </div>
         </footer>
     );

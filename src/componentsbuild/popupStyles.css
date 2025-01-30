@@ -1,0 +1,44 @@
+/* Popup-ikkunan tausta */
+.popup-overlay {
+    position: fixed; /* Kiinnitetään ikkuna */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Tumma tausta */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Asetetaan korkea z-indeksi */
+}
+
+/* Popup-ikkunan sisältö */
+.popup-content {
+    position: relative;
+    background-color: #fff; /* Valkoinen tausta */
+    padding: 20px; /* Lisätään täytettä */
+    width: 80%; /* Asetetaan leveys */
+    max-width: 600px; /* Maksimileveys */
+    border-radius: 10px; /* Pyöristetään reunat */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Lisätään varjo */
+}
+
+/* Popup-ikkunan kuva */
+.popup-content img {
+    width: 100%; /* Asetetaan kuvan leveys */
+    height: auto; /* Asetetaan kuvan korkeus automaattisesti */
+    display: block;
+    margin: 0 auto; /* Keskitetään kuva */
+}
+
+/* Sulje-painike */
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent; /* Läpinäkyvä tausta */
+    border: none; /* Poistetaan reunus */
+    font-size: 20px; /* Asetetaan fonttikoko */
+    cursor: pointer; /* Vaihdetaan kursori osoittimeksi */
+    color: #333; /* Asetetaan tekstin väri */
+}

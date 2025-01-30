@@ -1,0 +1,57 @@
+/* Kontakti-säiliö, joka keskittää sisällön ja lisää täytettä */
+.contacts-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* Kontaktit-säiliö, joka jakaa tilan tasaisesti */
+.contacts {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* Yksittäinen kontakti-kortti */
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 10px;
+    padding: 20px;
+    border: 1px solid #fdda10;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+
+/* Kontaktin kuva */
+.contact-image img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* Kontaktin teksti */
+.contact-text {
+    text-align: center;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+/* Kontaktin otsikko */
+.contact-title {
+    margin: 10px 0;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+/* Media query, joka muuttaa asettelua pienemmillä näytöillä */
+@media (max-width: 768px) {
+    .contacts {
+        flex-direction: column;
+        align-items: center;
+    }
+}

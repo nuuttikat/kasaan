@@ -1,40 +1,41 @@
+/* Footer-tyylit */
 .footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #282c34;
-    color: white;
-    padding: 20px 0;
+    display: flex; /* Käytetään flexbox-asettelua */
+    flex-direction: column; /* Asetetaan elementit pystysuoraan */
+    align-items: center; /* Keskitetään elementit vaakasuunnassa */
+    background-color: #282c34; /* Asetetaan taustaväri */
+    color: white; /* Asetetaan tekstin väri */
+    padding: 20px 0; /* Lisätään täytettä ylä- ja alapuolelle */
 }
 
 .footer-icons {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; /* Asettaa ikonit ja tekstit vasemmalle laidalle */
-    margin-bottom: 10px;
-    width: 90%;
-    padding-left: 20px; /* Vähän marginaalia vasemmalta */
+    display: flex; /* Käytetään flexbox-asettelua */
+    flex-direction: column; /* Asetetaan elementit pystysuoraan */
+    align-items: flex-start; /* Asetetaan ikonit ja tekstit vasemmalle laidalle */
+    margin-bottom: 10px; /* Lisätään marginaali alapuolelle */
+    width: 90%; /* Asetetaan leveys */
+    padding-left: 20px; /* Lisätään täytettä vasemmalle */
 }
 
 .footer-text-label {
-    margin-bottom: 5px;
-    font-weight: bold;
+    margin-bottom: 5px; /* Lisätään marginaali alapuolelle */
+    font-weight: bold; /* Asetetaan lihavointi */
 }
 
 .footer-icon-text {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px; /* Pieni väli jokaisen ikoni-tekstiparin väliin */
+    display: flex; /* Käytetään flexbox-asettelua */
+    align-items: center; /* Keskitetään elementit pystysuunnassa */
+    margin-bottom: 10px; /* Lisätään marginaali alapuolelle */
 }
 
 .footer-icon-text a {
-    color: white;
-    margin-right: 10px;
+    color: white; /* Asetetaan linkin väri */
+    margin-right: 10px; /* Lisätään marginaali oikealle */
 }
 
 .footer-caption-link {
-    color: white;
-    text-decoration: none;
+    color: white; /* Asetetaan linkin väri */
+    text-decoration: none; /* Poistetaan alleviivaus */
 }
 
 .footer-caption-link:hover {
@@ -42,16 +43,5 @@
 }
 
 .footer-caption {
-    margin-top: 5px; /* Vähän väliä ikoniin */
-}
-
-.footer-text {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.footer-email {
-    text-align: center;
-    font-size: 18px;
-    color: white;
+    margin-top: 5px; /* Lisätään marginaali yläpuolelle */
 }

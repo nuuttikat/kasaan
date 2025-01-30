@@ -1,100 +1,117 @@
+/* Header-tyylit */
 .header {
-    background-color: #fcda1e;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px 40px;
-    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.1);
-    width: 100%; /* header koko näytö levyseks */
-    top: 0;
-    z-index: 1000;
-    position: relative;
-    box-sizing: border-box;
+    background-color: #fcda1e; /* Asetetaan taustaväri */
+    display: flex; /* Käytetään flexbox-asettelua */
+    align-items: center; /* Keskitetään elementit pystysuunnassa */
+    justify-content: center; /* Keskitetään elementit vaakasuunnassa */
+    padding: 20px 40px; /* Lisätään täytettä */
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.1); /* Lisätään varjo */
+    width: 100%; /* Asetetaan leveydeksi 100% */
+    top: 0; /* Asetetaan yläreunaan */
+    z-index: 1000; /* Asetetaan z-indeksi */
+    position: relative; /* Asetetaan suhteellinen sijainti */
+    box-sizing: border-box; /* Sisällytetään reunukset ja täytteet elementin kokonaisleveyteen ja -korkeuteen */
 }
 
+/* Logon säiliö */
+.logo-container {
+    list-style: none; /* Poistetaan luettelomerkit */
+    margin: 0; /* Poistetaan marginaali */
+    padding: 0; /* Poistetaan täyte */
+}
+
+/* Logon tyyli */
 .header-logo {
-    height: 10rem; /* logon koko */
-    margin-right: 20px;
-    position: absolute;
-    left: 20px;
+    height: 10rem; /* Asetetaan logon koko */
+    margin-right: 20px; /* Lisätään marginaali oikealle */
+    position: absolute; /* Asetetaan absoluuttinen sijainti */
+    left: 20px; /* Asetetaan vasemmalle */
+    top: -20px; /* Nosta logoa 20px ylöspäin */
 }
 
+/* Tekstisäiliön tyyli */
 .header-text-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: flex; /* Käytetään flexbox-asettelua */
+    flex-direction: column; /* Asetetaan elementit pystysuoraan */
+    align-items: center; /* Keskitetään elementit vaakasuunnassa */
 }
 
+/* Otsikon ja alaotsikon tyyli */
 .header-title, .header-subtitle {
-    margin: 0;
-    text-align: center;
+    margin: 0; /* Poistetaan marginaali */
+    text-align: center; /* Keskitetään teksti */
 }
 
+/* Otsikon tyyli */
 .header-title {
-    font-size: 1.8rem;
+    font-size: 1.8rem; /* Asetetaan fonttikoko */
 }
 
+/* Alaotsikon tyyli */
 .header-subtitle {
-    font-size: 1rem;
-    color: #000000;
+    font-size: 1rem; /* Asetetaan fonttikoko */
+    color: #000000; /* Asetetaan tekstin väri */
 }
 
+/* Sosiaalisen median ikonien säiliö */
 .header-icons {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    position: absolute;
-    right: 20px;
+    display: flex; /* Käytetään flexbox-asettelua */
+    align-items: center; /* Keskitetään elementit pystysuunnassa */
+    gap: 10px; /* Lisätään väliä elementtien väliin */
+    position: absolute; /* Asetetaan absoluuttinen sijainti */
+    right: 20px; /* Asetetaan oikealle */
 }
 
+/* Sosiaalisen median linkkien tyyli */
 .header-icons a {
-    color: black; /* Muuta väri sopivaksi headeriin */
+    color: black; /* Asetetaan linkin väri */
 }
 
-/* Responsiivisuus */
+/* Media query pienemmille näytöille */
 @media (max-width: 768px) {
     .header {
-        flex-direction: column;
-        align-items: center;
-        padding: 10px 20px;
+        flex-direction: column; /* Asetetaan elementit pystysuoraan */
+        align-items: center; /* Keskitetään elementit vaakasuunnassa */
+        padding: 10px 20px; /* Lisätään täytettä */
     }
 
     .header-logo {
-        height: 7rem; /* pienempi koko pienemmis näyt */
-        position: static; /* Resets to normal flow for small screens */
-        margin-bottom: 10px; /* Adds space below the logo */
+        height: 7rem; /* Asetetaan logon koko pienemmäksi */
+        position: static; /* Asetetaan staattinen sijainti */
+        margin-bottom: 10px; /* Lisätään marginaali alapuolelle */
     }
 
     .header-text-container {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: column; /* Asetetaan elementit pystysuoraan */
+        align-items: center; /* Keskitetään elementit vaakasuunnassa */
     }
 
     .header-title {
-        font-size: 1.4rem;
+        font-size: 1.4rem; /* Asetetaan fonttikoko pienemmäksi */
     }
 
     .header-subtitle {
-        font-size: 1rem;
+        font-size: 1rem; /* Asetetaan fonttikoko */
     }
 
     .header-icons {
-        position: static;
-        margin-top: 10px;
+        position: static; /* Asetetaan staattinen sijainti */
+        margin-top: 10px; /* Lisätään marginaali yläpuolelle */
     }
 
     .social-icon {
-        width: 25px;
-        height: 25px;
+        width: 25px; /* Asetetaan ikonin leveys */
+        height: 25px; /* Asetetaan ikonin korkeus */
     }
 }
 
+/* Media query vielä pienemmille näytöille */
 @media (max-width: 480px) {
     .header-title {
-        font-size: 1.2rem;
+        font-size: 1.2rem; /* Asetetaan fonttikoko vielä pienemmäksi */
     }
 
     .header-subtitle {
-        font-size: 0.9rem;
+        font-size: 0.9rem; /* Asetetaan fonttikoko vielä pienemmäksi */
     }
 }

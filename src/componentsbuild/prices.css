@@ -1,0 +1,44 @@
+/* Hinnaston säiliö */
+.prices-container {
+    padding: 20px; /* Lisätään täytettä */
+    max-width: 800px; /* Asetetaan maksimileveys */
+    margin: auto; /* Keskitetään säiliö */
+}
+
+/* Hinnastotaulukko */
+.prices-table {
+    width: 100%; /* Asetetaan leveys */
+    border-collapse: collapse; /* Poistetaan solujen väliset välit */
+}
+
+/* Taulukon otsikot ja solut */
+.prices-table th,
+.prices-table td {
+    border: 1px solid #fdda10; /* Asetetaan reunus */
+    padding: 8px; /* Lisätään täytettä */
+}
+
+/* Taulukon otsikon tyyli */
+.prices-table th {
+    padding-top: 12px; /* Lisätään täytettä yläpuolelle */
+    padding-bottom: 12px; /* Lisätään täytettä alapuolelle */
+    text-align: left; /* Asetetaan teksti vasemmalle */
+    background-color: rgba(255, 255, 255, 0.8); /* Asetetaan taustaväri */
+    color: black; /* Asetetaan tekstin väri */
+}
+
+/* Parillisten rivien taustaväri */
+.prices-table tr:nth-child(even) {
+    background-color: #f9f9f9; /* Asetetaan taustaväri */
+}
+
+/* Rivin hover-tila */
+.prices-table tr:hover {
+    background-color: #ddd; /* Asetetaan taustaväri */
+}
+
+/* Taulukon solujen tyyli */
+.prices-table td {
+    font-size: 1rem; /* Asetetaan fonttikoko */
+    text-align: left; /* Asetetaan teksti vasemmalle */
+}

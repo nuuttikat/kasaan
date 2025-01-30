@@ -1,0 +1,140 @@
+/* Yarbocore-osio, joka asettaa elementit vaakasuoraan */
+.yarbo-section {
+    display: flex; /* Käytetään flexbox-asettelua */
+    flex-direction: row; /* Asetetaan elementit vaakasuoraan */
+    justify-content: flex-start; /* Asetetaan elementit vasemmalle */
+    align-items: flex-start; /* Asetetaan elementit yläreunaan */
+    margin-bottom: 200px; /* Lisätään marginaali alapuolelle */
+    width: 100%; /* Asetetaan leveydeksi 100% */
+    box-sizing: border-box; /* Sisällytetään reunukset ja täytteet elementin kokonaisleveyteen ja -korkeuteen */
+    margin-left: 10px; /* Lisätään marginaali vasemmalle */
+}
+
+/* Painikkeiden säiliö */
+.buttons-container {
+    width: 200px; /* Asetetaan leveys */
+    flex: 1; /* Asetetaan joustavuus */
+    padding-right: 20px; /* Lisätään täytettä oikealle */
+}
+
+/* Moduulit ja lisäosat */
+.moduls, .lisaosat {
+    width: 100%; /* Asetetaan leveydeksi 100% */
+}
+
+/* Painikkeet ja linkkipainikkeet */
+button, .link-button {
+    display: block; /* Näytetään elementti lohkona */
+    margin-bottom: 10px; /* Lisätään marginaali alapuolelle */
+    padding: 10px 20px; /* Lisätään täytettä */
+    border: 2px solid #a8a5a5; /* Asetetaan reunuksen väri */
+    background-color: rgba(40, 44, 52, 0); /* Asetetaan taustaväri */
+    color: #a8a5a5; /* Asetetaan tekstin väri */
+    cursor: pointer; /* Muutetaan osoitin kädeksi */
+    text-decoration: none; /* Poistetaan tekstin alleviivaus */
+    text-align: center; /* Keskitetään teksti */
+    border-radius: 5px; /* Pyöristetään reunat */
+    width: 200px; /* Asetetaan leveys */
+    position: relative; /* Asetetaan suhteellinen sijainti */
+}
+
+/* Valintamerkki */
+.checkmark {
+    position: absolute; /* Asetetaan absoluuttinen sijainti */
+    top: 50%; /* Asetetaan yläreunasta 50% */
+    right: 20px; /* Asetetaan oikeasta reunasta 20px */
+    transform: translateY(-50%); /* Keskitetään pystysuunnassa */
+    color: #fcda1e; /* Asetetaan väri */
+    font-size: 14px; /* Asetetaan fonttikoko */
+    visibility: visible; /* Näkyvyys asetetaan aina näkyväksi */
+    width: 5px; /* Asetetaan leveys */
+}
+
+/* Aktiivisen painikkeen valintamerkki */
+button.active .checkmark {
+    color: #fcda1e; /* Asetetaan väri aktiiviselle */
+}
+
+/* Aktiivinen painike */
+button.active {
+    background-color: #282c34; /* Asetetaan taustaväri */
+    color: #fcda1e; /* Asetetaan tekstin väri */
+}
+
+/* Linkkipainike */
+.link-button {
+    background-color: rgb(168, 165, 165); /* Asetetaan taustaväri */
+    font-size: 10px; /* Asetetaan fonttikoko */
+    width: 60px; /* Asetetaan leveys */
+    border-color: #a8a5a5; /* Asetetaan reunuksen väri */
+    color: white; /* Asetetaan tekstin väri */
+}
+
+/* Linkkipainike hover-tilassa */
+.link-button:hover {
+    background-color: #000000; /* Asetetaan taustaväri hover-tilassa */
+    text-decoration: underline; /* Alleviivataan teksti hover-tilassa */
+}
+
+/* Painikkeiden välinen marginaali */
+.buttons-container button + .link-button {
+    margin-top: 0; /* Poistetaan marginaali yläpuolelta */
+}
+
+/* Linkkipainikkeen ja painikkeen välinen marginaali */
+.buttons-container .link-button + button {
+    margin-top: 20px; /* Lisätään marginaali yläpuolelle */
+}
+
+/* Kuvan näyttöalue */
+.image-display {
+    flex: 2; /* Asetetaan joustavuus */
+    display: flex; /* Käytetään flexbox-asettelua */
+    align-items: center; /* Keskitetään elementit pystysuunnassa */
+    justify-content: center; /* Keskitetään elementit vaakasuunnassa */
+    min-height: 80px; /* Asetetaan minimikorkeus */
+}
+
+/* Kuvan tyyli */
+.image-display img {
+    max-width: 80%; /* Asetetaan maksimileveys */
+    height: auto; /* Asetetaan automaattinen korkeus */
+    border: 2px solid #ddd; /* Asetetaan reunuksen väri */
+    border-radius: 5px; /* Pyöristetään reunat */
+    padding: 5px; /* Lisätään täytettä */
+}
+
+/* Täysleveä elementti */
+.full-width {
+    width: 100%; /* Asetetaan leveydeksi 100% */
+    box-sizing: border-box; /* Sisällytetään reunukset ja täytteet elementin kokonaisleveyteen ja -korkeuteen */
+    overflow: hidden; /* Piilotetaan ylivuotava sisältö */
+}
+
+/* Yarbocore-osioiden välinen marginaali */
+.yarbo-section + .yarbo-section {
+    margin-top: 80px; /* Lisätään marginaali yläpuolelle */
+}
+
+/* Core-kuvan tyyli */
+.core .image-display img {
+    width: auto; /* Asetetaan automaattinen leveys */
+    height: 300px; /* Asetetaan korkeus */
+    border: 2px solid #ddd; /* Asetetaan reunuksen väri */
+    border-radius: 5px; /* Pyöristetään reunat */
+    padding: 5px; /* Lisätään täytettä */
+    position: relative; /* Asetetaan suhteellinen sijainti */
+}
+
+/* Kokonaishinnan tyyli */
+.total-price {
+    position: fixed; /* Asetetaan kiinteä sijainti */
+    bottom: 40px; /* Asetetaan alareunasta 40px */
+    left: 50%; /* Asetetaan vasemmasta reunasta 50% */
+    transform: translateX(-50%); /* Keskitetään vaakasuunnassa */
+    background: #ffffff; /* Asetetaan taustaväri */
+    padding: 20px; /* Lisätään täytettä */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Lisätään varjo */
+    text-align: center; /* Keskitetään teksti */
+    border-radius: 5px; /* Pyöristetään reunat */
+}
