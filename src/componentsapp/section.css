@@ -1,91 +1,107 @@
 /* Pääosioiden säiliö */
 .sections-container {
-    display: flex; /* Käytetään flexbox-asettelua */
-    flex-direction: column; /* Asetetaan elementit pystysuoraan */
-    align-items: center; /* Keskitetään elementit vaakasuunnassa */
-    padding: 20px; /* Lisätään täytettä */
-    background-color: rgba(255, 255, 255, 0.8); /* Asetetaan taustaväri */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
 }
 
 /* Pääosioiden kontti */
 .sections {
-    display: flex; /* Käytetään flexbox-asettelua */
-    justify-content: space-between; /* Jakaa tilan tasaisesti elementtien välillä */
-    width: 100%; /* Asetetaan leveydeksi 100% */
-    max-width: 1200px; /* Asetetaan maksimileveydeksi 1200px */
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    flex-wrap: wrap; /* antaa toimia pienemmillä näytöillä */
 }
 
 /* Yksittäinen pääosio */
 .section {
-    display: flex; /* Käytetään flexbox-asettelua */
-    flex-direction: column; /* Asetetaan elementit pystysuoraan */
-    align-items: center; /* Keskitetään elementit vaakasuunnassa */
-    margin: 0 10px; /* Lisätään marginaali vasemmalle ja oikealle */
-    padding: 20px; /* Lisätään täytettä */
-    border: 1px solid #fdda10; /* Asetetaan reunuksen väri */
-    border-radius: 10px; /* Pyöristetään reunat */
-    background-color: #f9f9f9; /* Asetetaan taustaväri */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 10px;
+    padding: 20px;
+    border: 1px solid #fdda10;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    flex: 1 1 300px; /* antaa toimia pienemmillä näytöillä */
 }
 
 /* Pääosion kuva */
 .section-image img {
-    width: 100%; /* Asetetaan leveydeksi 100% */
-    height: 300px; /* Asetetaan korkeudeksi 300px */
-    object-fit: cover; /* Varmistetaan, että kuva peittää säiliön */
+    width: 100%;
+    height: auto; /* Skaalaa kuvan korkeus suhteessa leveyteen */
+    object-fit: cover;
 }
 
 /* Pääosion teksti */
 .section-text {
-    text-align: center; /* Keskitetään teksti */
-    font-size: 1rem; /* Asetetaan fonttikoko */
-    margin-top: 10px; /* Lisätään marginaali yläpuolelle */
+    text-align: center;
+    font-size: 1rem;
+    margin-top: 10px;
 }
 
 /* Pääosion otsikko */
 .section-title {
-    margin: 10px 0; /* Lisätään marginaali ylä- ja alapuolelle */
-    font-size: 1.5rem; /* Asetetaan fonttikoko */
-    color: #333; /* Asetetaan tekstin väri */
+    margin: 10px 0;
+    font-size: 1.5rem;
+    color: #333;
 }
 
 /* Lisäosioiden kontti */
 .small-sections {
-    display: flex; /* Käytetään flexbox-asettelua */
-    justify-content: space-between; /* Jakaa tilan tasaisesti elementtien välillä */
-    width: 100%; /* Asetetaan leveydeksi 100% */
-    max-width: 1200px; /* Asetetaan maksimileveydeksi 1200px */
-    margin-top: 20px; /* Lisätään marginaali yläpuolelle */
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 20px;
+    flex-wrap: wrap; /* antaa toimia pienemmillä näytöillä */
 }
 
 /* Yksittäinen lisäosio */
 .small-section {
-    display: flex; /* Käytetään flexbox-asettelua */
-    flex-direction: column; /* Asetetaan elementit pystysuoraan */
-    align-items: center; /* Keskitetään elementit vaakasuunnassa */
-    margin: 0 10px; /* Lisätään marginaali vasemmalle ja oikealle */
-    padding: 20px; /* Lisätään täytettä */
-    border: 1px solid #fdda10; /* Asetetaan reunuksen väri */
-    border-radius: 10px; /* Pyöristetään reunat */
-    background-color: #f9f9f9; /* Asetetaan taustaväri */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 10px;
+    padding: 20px;
+    border: 1px solid #fdda10;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    flex: 1 1 200px; /* antaa toimia pienemmillä näytöillä */
 }
 
 /* Lisäosion kuva */
 .small-section-image img {
-    width: 100%; /* Asetetaan leveydeksi 100% */
-    height: 200px; /* Asetetaan korkeudeksi 200px */
-    object-fit: cover; /* Varmistetaan, että kuva peittää säiliön */
+    width: 100%;
+    height: auto; /* Skaalaa kuvan korkeus suhteessa leveyteen */
+    object-fit: cover;
 }
 
 /* Lisäosion teksti */
 .small-section-text {
-    text-align: center; /* Keskitetään teksti */
-    font-size: 1rem; /* Asetetaan fonttikoko */
-    margin-top: 10px; /* Lisätään marginaali yläpuolelle */
+    text-align: center;
+    font-size: 1rem;
+    margin-top: 10px;
 }
 
 /* Lisäosion otsikko */
 .small-section-title {
-    margin: 10px 0; /* Lisätään marginaali ylä- ja alapuolelle */
-    font-size: 1.5rem; /* Asetetaan fonttikoko */
-    color: #333; /* Asetetaan tekstin väri */
+    margin: 10px 0;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .sections, .small-sections {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section, .small-section {
+        margin: 10px 0;
+    }
 }
